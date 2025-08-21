@@ -206,6 +206,7 @@
 
 
   # Fonts
+  fonts.fontconfig.enable = true;
   fonts.packages = with pkgs; [ 
 
           pkgs.emojione
