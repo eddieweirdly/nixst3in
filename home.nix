@@ -24,6 +24,7 @@
       pkgs.nerd-fonts.jetbrains-mono
       pkgs.nerd-fonts.open-dyslexic
       pkgs.nerd-fonts.profont
+      pkgs.nerd-fonts._3270
       pkgs.tealdeer
       pkgs.bat
    ];
