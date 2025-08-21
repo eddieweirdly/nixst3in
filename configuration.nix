@@ -219,6 +219,7 @@
           pkgs.unicode-emoji
           pkgs.noto-fonts-emoji
           pkgs.open-sans
+	  pkgs.nerd-fonts._3270
 
   ];
 
