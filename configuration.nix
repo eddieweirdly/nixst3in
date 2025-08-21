@@ -180,6 +180,16 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
+
+
+  # Steam
+  programs.steam = {
+         enable = true;
+	 remotePlay.openFirewall = true;
+	 protontricks.enable = true;
+	 gamescopeSession.enable = true;
+  };
+
   # Filesystems
   fileSystems."/mnt/windows" = {
     device = "/dev/disk/by-uuid/B658F1D258F1917B"; # Replace with your drive's UUID
