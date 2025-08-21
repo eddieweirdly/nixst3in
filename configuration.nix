@@ -190,6 +190,15 @@
 	 gamescopeSession.enable = true;
   };
 
+
+  # Alvr
+  programs.alvr = {
+         enable = true;
+	 openFirewall = true;
+
+  };
+
+
   # Filesystems
   fileSystems."/mnt/windows" = {
     device = "/dev/disk/by-uuid/B658F1D258F1917B"; # Replace with your drive's UUID
@@ -208,7 +217,9 @@
        open = false;
        nvidiaSettings = true;
        package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };  
+  };
+
+   hardware.nvidia-container-toolkit.mount-nvidia-executables = true;
 
 
   # Home-Manager & Flakes
