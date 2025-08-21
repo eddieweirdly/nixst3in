@@ -215,12 +215,15 @@
           pkgs.xorg.fontmiscmisc
           pkgs.xorg.fontbhttf
           pkgs.corefonts
-          pkgs.google-fonts        
+         # pkgs.google-fonts        
           pkgs.ucs-fonts
           pkgs.unicode-emoji
           pkgs.noto-fonts-emoji
           pkgs.open-sans
 	  pkgs.nerd-fonts._3270
+	  pkgs.nerd-fonts.jetbrains-mono
+	  pkgs.nerd-fonts.open-dyslexic
+          pkgs.nerd-fonts._3270
 
   ];
 

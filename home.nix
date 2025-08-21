@@ -21,10 +21,7 @@
     # pkgs.hello
       pkgs.ghostty
       pkgs.fastfetch
-      pkgs.nerd-fonts.jetbrains-mono
-      pkgs.nerd-fonts.open-dyslexic
-      pkgs.nerd-fonts.profont
-      pkgs.nerd-fonts._3270
+      pkgs.font-manager
       pkgs.tealdeer
       pkgs.bat
    ];
