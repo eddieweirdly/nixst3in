@@ -77,6 +77,7 @@
      refind
      hyprpanel
      yazi
+     vulkan-tools
 
 
     
@@ -214,7 +215,7 @@
        modesetting.enable = true;
        powerManagement.enable = false;
        powerManagement.finegrained = false;
-       open = false;
+       open = true;
        nvidiaSettings = true;
        package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
