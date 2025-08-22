@@ -25,6 +25,7 @@
       pkgs.tealdeer
       pkgs.bat
       pkgs.btop-cuda
+      pkgs.prismlauncher
    ];
   
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -61,7 +62,7 @@
 
   programs.zsh = {
          enable = true;
-         enableAutosuggestions = true;
+         autosuggestion.enable = true;
          enableCompletion = true;
          syntaxHighlighting.enable = true;
  
