@@ -12,6 +12,7 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelParams = [ "module_blacklist=amdgpu" ];
 
   networking.hostName = "NixSt3in"; # Define your hostname.
   # Pick only one of the below networking options.
@@ -78,9 +79,7 @@
      hyprpanel
      yazi
      vulkan-tools
-     nvidia-container-toolkit
-     cudaPackages_11.cudatoolkit
-
+     cudaPackages.cudatoolkit
 
 
     
@@ -195,18 +194,10 @@
   };
 
 
-  # Alvr
-  programs.alvr = {
-         enable = true;
-	 openFirewall = true;
-  };
-
-
-
   # Wivrn
-  services.wivrn.enable = true;
-  services.wivrn.openFirewall = true;
-  services.wivrn.config.enable = true;
+ # services.wivrn.enable = true;
+ # services.wivrn.openFirewall = true;
+ # services.wivrn.config.enable = true;
 
 
   # Avahi
@@ -237,7 +228,8 @@
 
    hardware.graphics.enable = true;
    hardware.graphics.enable32Bit = true;
-
+   
+   hardware.nvidia-container-toolkit.enable = true;
    hardware.nvidia-container-toolkit.mount-nvidia-executables = true;
 
 
