@@ -78,7 +78,8 @@
      hyprpanel
      yazi
      vulkan-tools
-     avahi
+     nvidia-container-toolkit
+     cudaPackages_11.cudatoolkit
 
 
 
@@ -206,7 +207,12 @@
   services.wivrn.enable = true;
   services.wivrn.openFirewall = true;
   services.wivrn.config.enable = true;
-  services.avahi.ipv4 = true;
+
+
+  # Avahi
+  services.avahi.enable = true;
+  services.avahi.openFirewall = true;
+  services.avahi.publish.enable = true;
 
   # Filesystems
   fileSystems."/mnt/windows" = {
