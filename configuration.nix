@@ -166,27 +166,21 @@
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
 
-
   # Flatpak
   services.flatpak.enable = true;
-
 
   # Thunar
   programs.thunar.enable = true;
   programs.thunar.plugins = with pkgs.xfce; [ 
   thunar-archive-plugin thunar-volman ];
 
-
   # Bluetooth
   hardware.bluetooth.enable = true;
-
 
   # ZSH
   environment.shells = with pkgs; [zsh];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
-
-
 
   # Steam
   programs.steam = {
@@ -196,13 +190,11 @@
 	 gamescopeSession.enable = true;
   };
 
-
   # Wivrn
   services.wivrn.enable = true;
   services.wivrn.openFirewall = true;
   services.wivrn.config.enable = true;
   services.wivrn.defaultRuntime = true;
-
 
   # Monado
   services.monado.enable = true;
@@ -219,8 +211,6 @@
     options = [ "users" "nofail" ]; # Allows any user to mount; prevents boot failure if drive is not present
   };
 
-
-
   # Nvidia Drivers
   services.xserver.videoDrivers = ["nvidia"];
       hardware.nvidia = {
@@ -232,22 +222,18 @@
       package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-
    hardware.graphics.enable = true;
    hardware.graphics.enable32Bit = true;
    
    hardware.nvidia-container-toolkit.enable = true;
    hardware.nvidia-container-toolkit.mount-nvidia-executables = true;
 
-
   # Home-Manager & Flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
-
 
   # Fonts
   fonts.fontconfig.enable = true;
   fonts.packages = with pkgs; [ 
-
           pkgs.emojione
           pkgs.emojipick        
           pkgs.siji
@@ -263,19 +249,13 @@
 	  pkgs.nerd-fonts.jetbrains-mono
 	  pkgs.nerd-fonts.open-dyslexic
           pkgs.nerd-fonts._3270
-
   ];
-
-
-
-
-
-
-
-
-
-
-
+  
+  # Virt-Manager
+  programs.virt-manager.enable = true;
+  users.groups.libvirtd.members = ["drfrankenstein"];
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
 
 
 
