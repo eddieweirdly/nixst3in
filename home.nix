@@ -24,6 +24,7 @@
       pkgs.font-manager
       pkgs.tealdeer
       pkgs.bat
+      pkgs.btop-cuda
    ];
   
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

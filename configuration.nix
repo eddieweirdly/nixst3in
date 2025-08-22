@@ -80,6 +80,9 @@
      yazi
      vulkan-tools
      cudaPackages.cudatoolkit
+     wayvr-dashboard
+     wlx-overlay-s
+
 
 
     
@@ -195,10 +198,14 @@
 
 
   # Wivrn
- # services.wivrn.enable = true;
- # services.wivrn.openFirewall = true;
- # services.wivrn.config.enable = true;
+  services.wivrn.enable = true;
+  services.wivrn.openFirewall = true;
+  services.wivrn.config.enable = true;
+  services.wivrn.defaultRuntime = true;
 
+
+  # Monado
+  services.monado.enable = true;
 
   # Avahi
   services.avahi.enable = true;
