@@ -78,6 +78,8 @@
      hyprpanel
      yazi
      vulkan-tools
+     avahi
+
 
 
     
@@ -196,9 +198,15 @@
   programs.alvr = {
          enable = true;
 	 openFirewall = true;
-
   };
 
+
+
+  # Wivrn
+  services.wivrn.enable = true;
+  services.wivrn.openFirewall = true;
+  services.wivrn.config.enable = true;
+  services.avahi.ipv4 = true;
 
   # Filesystems
   fileSystems."/mnt/windows" = {
