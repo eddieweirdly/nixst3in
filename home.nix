@@ -26,6 +26,7 @@
       pkgs.bat
       pkgs.btop-cuda
       pkgs.prismlauncher
+      pkgs.sidequest
    ];
   
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
