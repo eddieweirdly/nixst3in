@@ -27,6 +27,8 @@
       pkgs.btop-cuda
       pkgs.prismlauncher
       pkgs.sidequest
+      pkgs.immersed
+
    ];
   
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -60,6 +62,8 @@
   };
 
 ########## My Changes ##########
+
+  nixpkgs.config.allowUnfree = true;
 
   programs.zsh = {
          enable = true;

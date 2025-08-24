@@ -196,6 +196,9 @@
   services.wivrn.config.enable = true;
   services.wivrn.defaultRuntime = true;
 
+  # Immersed
+  programs.immersed.enable = true;
+
   # Monado
   services.monado.enable = true;
 
