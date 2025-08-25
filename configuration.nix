@@ -82,6 +82,7 @@
      cudaPackages.cudatoolkit
      wayvr-dashboard
      wlx-overlay-s
+     xdg-desktop-portal-hyprland
 
 
 
@@ -197,7 +198,7 @@
   services.wivrn.defaultRuntime = true;
 
   # Immersed
-  programs.immersed.enable = true;
+  # programs.immersed.enable = true;
 
   # Monado
   services.monado.enable = true;
