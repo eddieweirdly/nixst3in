@@ -28,6 +28,7 @@
       pkgs.prismlauncher
       pkgs.sidequest
       pkgs.immersed
+      pkgs.warp-terminal
 
    ];
   
@@ -62,6 +63,8 @@
   };
 
 ########## My Changes ##########
+                                 
+  services.clipse.enable = true;	 
 
   nixpkgs.config.allowUnfree = true;
 
@@ -72,7 +75,7 @@
          syntaxHighlighting.enable = true;
  
          };
-  
+
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

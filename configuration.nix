@@ -73,7 +73,6 @@
      rofi-wayland
      kitty
      file-roller
-     clipse
      gitFull
      refind
      hyprpanel
@@ -83,6 +82,7 @@
      wayvr-dashboard
      wlx-overlay-s
      xdg-desktop-portal-hyprland
+     wl-clipboard
 
 
 
