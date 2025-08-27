@@ -29,6 +29,7 @@
       pkgs.sidequest
       pkgs.immersed
       pkgs.warp-terminal
+      pkgs.emacs
 
    ];
   

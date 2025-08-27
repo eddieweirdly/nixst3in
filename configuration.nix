@@ -12,8 +12,25 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [ "module_blacklist=amdgpu" ];
+  boot.kernelParams = [ "module_blacklist=amdgpu" "quiet" "udev.log_level=3"];
 
+  # Plymouth
+  boot.plymouth = {
+     enable = true;
+         theme = "ironman";
+         themePackages = with pkgs; [
+        # By default we would install all themes
+           (adi1090x-plymouth-themes.override {
+             selected_themes = [ "ironman" ];
+           })
+         ];
+       };
+  # Enable "Silent boot"
+  boot.initrd.verbose = false;
+  boot.consoleLogLevel = 0;
+  boot.loader.timeout = 5;
+   
+ 
   networking.hostName = "NixSt3in"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -79,10 +96,10 @@
      yazi
      vulkan-tools
      cudaPackages.cudatoolkit
-     wayvr-dashboard
      wlx-overlay-s
      xdg-desktop-portal-hyprland
      wl-clipboard
+     ripgrep
 
 
 
