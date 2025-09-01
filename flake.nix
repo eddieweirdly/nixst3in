@@ -2,7 +2,7 @@
  description = "My First Flake!";
 
  inputs = {
-   nixpkgs.url = "nixpkgs/nixos-unstable";
+   nixpkgs.url = "nixpkgs/nixos-25.05";
    home-manager.url = "github:nix-community/home-manager/master";
    home-manager.inputs.nixpkgs.follows = "nixpkgs";
    nixpkgs-xr.url = "github:nix-community/nixpkgs-xr/main";
